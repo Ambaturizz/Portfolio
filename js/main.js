@@ -53,10 +53,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const hasPlayedIntro = sessionStorage.getItem('introPlayed') === 'true';
+    const bgMusic = document.getElementById('bg-music');
+
+    function startMusic() {
+        if (!bgMusic) return;
+        bgMusic.volume = 0;
+        bgMusic.play().then(() => {
+            // Fade in volume over 2 seconds
+            let vol = 0;
+            const fadeIn = setInterval(() => {
+                vol = Math.min(vol + 0.02, 0.4);
+                bgMusic.volume = vol;
+                if (vol >= 0.4) clearInterval(fadeIn);
+            }, 80);
+        }).catch(() => {});
+    }
 
     if (enterBtn && entranceGate && !hasPlayedIntro) {
         enterBtn.addEventListener('click', () => {
             sessionStorage.setItem('introPlayed', 'true');
+            startMusic();
             const tl = gsap.timeline({
                 onComplete: () => {
                     entranceGate.style.display = 'none';
@@ -109,6 +125,8 @@ document.addEventListener('DOMContentLoaded', () => {
             entranceGate.style.display = 'none';
         }
         
+        startMusic();
+
         setTimeout(() => {
             lenis.start();
             initScrollReveals();
