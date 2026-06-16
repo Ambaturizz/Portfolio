@@ -992,11 +992,10 @@ p.lead {
 }
 
 .contact-layout {
-    display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
+    display: flex;
+    flex-direction: column;
     gap: var(--space-xl);
     margin-bottom: var(--space-xl);
-    align-items: center;
 }
 
 .contact-pre {
