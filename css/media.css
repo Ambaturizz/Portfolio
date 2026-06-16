@@ -22,12 +22,16 @@
     .about-grid {
         grid-template-columns: 1fr;
         gap: 50px;
+        width: 100%;
     }
 
     .about-img-col {
         order: -1; 
-        max-width: 500px;
+        max-width: 100%;
         margin: 0 auto;
+    }
+    .portrait-container {
+        max-width: 100%;
     }
 
     .works-grid {
@@ -120,9 +124,12 @@
         font-size: 20px;
     }
 
-    .enter-btn {
-        padding: 12px 30px;
-        font-size: 13px;
+    .enter-btn, .btn, .submit-btn {
+        padding: 12px 24px !important;
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
     }
 
     .social-links {

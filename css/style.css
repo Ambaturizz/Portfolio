@@ -72,7 +72,9 @@ body {
     font-family: var(--font-body);
     font-size: var(--font-size-body);
     line-height: 1.75;
-    overflow-x: hidden;
+    overflow-x: clip;
+    width: 100%;
+    position: relative;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -88,8 +90,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     pointer-events: none;
     z-index: 9999;
     opacity: 0.04;
@@ -468,7 +470,7 @@ p.lead {
 
 .hero-section {
     position: relative;
-    height: 100vh;
+    height: 100svh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -612,6 +614,9 @@ p.lead {
     font-size: clamp(40px, 5vw, 64px);
     line-height: 1.1;
     color: var(--color-text-main);
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
 }
 
 .editorial-block {
