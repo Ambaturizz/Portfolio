@@ -1,0 +1,125 @@
+
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+
+    h1 {
+        font-size: 64px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .about-img-col {
+        order: -1; 
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .works-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .masonry-item--wide {
+        grid-column: span 1;
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+        padding: 0 20px;
+    }
+
+    .mobile-nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(245, 243, 238, 0.98);
+        backdrop-filter: blur(10px);
+        padding: 40px 20px;
+        border-bottom: 1px solid rgba(46, 46, 46, 0.1);
+        gap: 30px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    
+    :root {
+        --section-padding: 80px 0;
+    }
+
+    .hero-content {
+        padding: 0 10px;
+    }
+
+    .email-direct {
+        font-size: 22px;
+    }
+
+    .contact-title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+        padding: 0 16px;
+    }
+
+    h1 {
+        font-size: 44px;
+    }
+
+    .prompt-italic {
+        font-size: 20px;
+    }
+
+    .enter-btn {
+        padding: 12px 30px;
+        font-size: 13px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+

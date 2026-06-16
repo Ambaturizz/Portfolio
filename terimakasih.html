@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terima Kasih — Faris Salman</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--color-bg, #f4f2ed);
+            text-align: center;
+            padding: var(--space-md);
+        }
+
+        /* Override hidden cursor from style.css since we aren't loading the custom JS cursor here */
+        @media (pointer: fine) {
+            body { cursor: default !important; }
+            a { cursor: pointer !important; }
+        }
+
+        .thank-you-title {
+            font-family: var(--font-primary, 'Playfair Display', serif);
+            font-size: clamp(32px, 5vw, 48px);
+            color: var(--color-text-main, #2E2E2E);
+            margin-bottom: var(--space-lg);
+        }
+
+        .gif-container {
+            max-width: 500px;
+            width: 100%;
+            border-radius: var(--radius-lg, 24px);
+            overflow: hidden;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+            margin-bottom: var(--space-xl);
+        }
+
+        .gif-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .back-link {
+            font-family: var(--font-secondary, 'Inter', sans-serif);
+            font-size: 14px;
+            color: var(--color-text-muted, #8a9385);
+            text-decoration: none;
+            border: 1px solid var(--color-border-subtle);
+            padding: 10px 24px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background-color: var(--color-text-main);
+            color: var(--color-bg);
+            border-color: var(--color-text-main);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="thank-you-title">Terima Kasih, Sekian terima gaji</h1>
+    
+    <div class="gif-container">
+        <img src="/video/CicakGoyang.gif" alt="Cicak Goyang" loop>
+    </div>
+
+    <a href="/index.html" class="back-link">&larr; Kembali ke Beranda</a>
+</body>
+</html>

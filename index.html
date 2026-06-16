@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Faris Salman — Creative Technologist & Designer</title>
+
+    <meta name="title" content="Faris Salman — Creative Technologist & Designer">
+    <meta name="description" content="Personal portfolio of Faris Salman, a creative technologist specializing in calm, minimal, and premium digital experiences inspired by nature.">
+    <meta name="keywords" content="Faris Salman, UI Designer, Web Developer, Creative Technologist, Portfolio, Nature-inspired UI">
+    <meta name="author" content="Faris Salman">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://farissalman.portfolio/">
+    <meta property="og:title" content="Faris Salman — Creative Technologist & Designer">
+    <meta property="og:description" content="Personal portfolio of Faris Salman, a creative technologist specializing in calm, minimal, and premium digital experiences inspired by nature.">
+    <meta property="og:image" content="https://farissalman.portfolio/img/portrait.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://farissalman.portfolio/">
+    <meta property="twitter:title" content="Faris Salman — Creative Technologist & Designer">
+    <meta property="twitter:description" content="Personal portfolio of Faris Salman, a creative technologist specializing in calm, minimal, and premium digital experiences inspired by nature.">
+    <meta property="twitter:image" content="https://farissalman.portfolio/img/portrait.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Person",
+      "name": "Faris Salman",
+      "url": "https://farissalman.portfolio/",
+      "image": "https://farissalman.portfolio/img/portrait.jpg",
+      "jobTitle": "Creative Technologist",
+      "description": "Creative technologist and designer focusing on minimal and nature-inspired digital experiences.",
+      "sameAs": [
+        "https://linkedin.com",
+        "https://www.instagram.com/salman.azhr"
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/media.css">
+</head>
+<body>
+    
+    <div class="noise-overlay"></div>
+
+    <div class="scroll-progress-bar" id="scroll-progress"></div>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"><span class="cursor-label"></span></div>
+
+    <div class="nature-entrance" id="entrance-gate">
+        <div class="entrance-sky"></div>
+
+        <div class="entrance-mountain entrance-mountain--back">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path d="M0,224 L180,180 L360,240 L540,160 L720,260 L900,190 L1080,280 L1260,200 L1440,240 L1440,320 L0,320 Z" fill="#5D6B57" opacity="0.3"></path>
+            </svg>
+        </div>
+
+        <div class="entrance-mountain entrance-mountain--front">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path d="M0,280 L240,220 L480,290 L720,210 L960,280 L1200,230 L1440,290 L1440,320 L0,320 Z" fill="#5D6B57" opacity="0.6"></path>
+            </svg>
+        </div>
+
+        <div class="entrance-mist"></div>
+
+        <div class="entrance-prompt">
+            <span class="prompt-italic">Welcome. Take a deep breath.</span>
+            <button class="btn btn-outline" id="enter-btn">Explore Quietly</button>
+        </div>
+    </div>
+
+    <header class="main-header" id="navbar">
+        <div class="container header-wrap">
+            <a href="#hero" class="nav-logo">Creative Portfolio</a>
+
+            <nav class="nav-links">
+                <a href="#about" class="nav-item">ABOUT ME</a>
+                <a href="#works" class="nav-item">PASSION</a>
+                <a href="#hobbies" class="nav-item">HOBBIES</a>
+                <a href="#contacts" class="nav-item">CONTACTS</a>
+            </nav>
+
+            <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Open Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+    <section class="hero-section" id="hero">
+        <div class="hero-ambient-bg">
+            <video autoplay muted loop playsinline class="ambient-video">
+                
+                <source src="https://cdn.pixabay.com/video/2020/02/20/32616-393275066_large.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-parallax-layer">
+            <img src="/img/Agung.jpg" alt="Pegunungan berkabut" class="hero-parallax-img">
+        </div>
+
+        <div class="container hero-content">
+            <div class="hero-text-wrapper">
+                <h1 class="hero-name reveal-text">Faris Salman</h1>
+                <p class="hero-tagline reveal-text">Exploring Ideas Through Design, Technology, and Creativity</p>
+            </div>
+
+            <div class="scroll-hint">
+                <span class="scroll-hint-text">Scroll Down</span>
+                <div class="scroll-hint-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        
+        <div class="decorative-leaf">
+            <svg width="100" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+            </svg>
+        </div>
+
+        <div class="container">
+            <div class="about-grid">
+
+                <div class="about-text-col fade-up-el">
+                    <div class="about-header-wrap">
+                        <span class="about-pre-title">Get to know me</span>
+                        <h2 class="section-title">The Path Less Traveled</h2>
+                    </div>
+                    
+                    <div class="editorial-block">
+                        <p class="lead-text">
+                            "I believe that great designs, like God's best creation, are built quietly, cleanly, and with careful intent."
+                        </p>
+                    </div>
+
+                    <div class="editorial-block">
+                        <h4 class="editorial-subtitle">Personal Story</h4>
+                        <p>
+                            Sebagai seseorang dengan tipe kepribadian <em>ENTJ</em>,  
+                            Saya menghargai kesederhanaan, keterbacaan, dan perhatian pada detail yang mudah terlewat. 
+                            Dengan komunikasi sebagai langkah utama dalam bertindak, 
+                            perjalanan saya selalu terinspirasi oleh "bagaimana orang lain melihat, tanpa memandang sisi negatif sama sekali". 
+                            Maka dari itu, Saya selalu berusaha untuk tidak terhenti pada satu pandangan, dengan <em>mindset</em> kegagalan berupa kesuksesan yang tertunda.
+                        </p>
+                    </div>
+
+                    <div class="editorial-block">
+                        <h4 class="editorial-subtitle">Core Values</h4>
+                        <p>
+                            Sebagai seorang <em>technologist</em>, 
+                            saya menggabungkan struktur teknologi yang kokoh dengan estetika visual yang tenang. 
+                            Dengan <em>eager to learn</em> yang tinggi, sangat mudah bagi diri saya untuk beradaptasi terhadap lingkungan dan pengetahuan baru. 
+                            Dan satu lagi, saya mencintai matematika dan logika.
+                        </p>
+                    </div>
+
+                    <div class="editorial-block">
+                        <h4 class="editorial-subtitle">The Journey</h4>
+                        <p>
+                            Aku fasilkom UI
+                        </p>
+                    </div>
+
+                    <div class="editorial-block skills-block">
+                        <h4 class="editorial-subtitle">Interests</h4>
+                        <div class="skills-chips">
+                            <span class="skill-chip">Web Development</span>
+                            <span class="skill-chip">Data Analyst</span>
+                            <span class="skill-chip">Software Engineer</span>
+                            <span class="skill-chip">Leadership</span>
+                            <span class="skill-chip">Yap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-img-col fade-up-el">
+                    <div class="portrait-container">
+                        
+                        <img src="/img/portrait.jpg" alt="Faris Salman Profile" class="portrait-img" loading="lazy">
+
+                        <div class="portrait-decoration"></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="works-section" id="works">
+        <div class="container">
+            
+            <div class="works-header fade-up-el">
+                <h2 class="section-title">Passion</h2>
+                <p class="section-subtitle">A curated collection of my tech expertise, certifications, and projects.</p>
+
+                <div class="works-filters mt-md">
+                    <button class="filter-btn active" data-filter="tech">Tech Stacks</button>
+                    <button class="filter-btn" data-filter="cert">Certificates</button>
+                    <button class="filter-btn" data-filter="project">Projects</button>
+                </div>
+            </div>
+
+            <div class="works-grid" id="passion-grid">
+
+                <div class="tech-stack-section" id="tech-stack-panel" data-category="tech">
+
+                    <div class="marquee-track-wrap">
+                        <div class="marquee-track marquee-left">
+                            <div class="marquee-inner">
+                                
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" loading="lazy">
+                                        <span class="tech-card-name">HTML5</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" loading="lazy">
+                                        <span class="tech-card-name">CSS3</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy">
+                                        <span class="tech-card-name">JavaScript</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" alt="Vite" loading="lazy">
+                                        <span class="tech-card-name">Vite</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.worldvectorlogo.com/logos/gsap-greensock.svg" alt="GSAP" loading="lazy">
+                                        <span class="tech-card-name">GSAP</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg" alt="Three.js" loading="lazy">
+                                        <span class="tech-card-name">Three.js</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" loading="lazy">
+                                        <span class="tech-card-name">Python</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" loading="lazy">
+                                        <span class="tech-card-name">Java</span>
+                                    </div>
+                                </div>
+
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" loading="lazy">
+                                        <span class="tech-card-name">HTML5</span>
+                                    </div>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" loading="lazy">
+                                        <span class="tech-card-name">CSS3</span>
+                                    </div>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy">
+                                        <span class="tech-card-name">JavaScript</span>
+                                    </div>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" alt="Vite" loading="lazy">
+                                        <span class="tech-card-name">Vite</span>
+                                    </div>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.worldvectorlogo.com/logos/gsap-greensock.svg" alt="GSAP" loading="lazy">
+                                        <span class="tech-card-name">GSAP</span>
+                                    </div>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg" alt="Three.js" loading="lazy">
+                                        <span class="tech-card-name">Three.js</span>
+                                    </div>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" loading="lazy">
+                                        <span class="tech-card-name">Python</span>
+                                    </div>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" loading="lazy">
+                                        <span class="tech-card-name">Java</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="marquee-track-wrap">
+                        <div class="marquee-track marquee-right">
+                            <div class="marquee-inner">
+                                
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" loading="lazy">
+                                        <span class="tech-card-name">C</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" loading="lazy">
+                                        <span class="tech-card-name">C++</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" loading="lazy">
+                                        <span class="tech-card-name">Git</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" loading="lazy">
+                                        <span class="tech-card-name">Figma</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" loading="lazy">
+                                        <span class="tech-card-name">VS Code</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" loading="lazy">
+                                        <span class="tech-card-name">GitHub</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" loading="lazy">
+                                        <span class="tech-card-name">Node.js</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="NPM" loading="lazy">
+                                        <span class="tech-card-name">NPM</span>
+                                    </div>
+                                </div>
+
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" loading="lazy">
+                                        <span class="tech-card-name">C</span>
+                                    </div>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" loading="lazy">
+                                        <span class="tech-card-name">C++</span>
+                                    </div>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" loading="lazy">
+                                        <span class="tech-card-name">Git</span>
+                                    </div>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" loading="lazy">
+                                        <span class="tech-card-name">Figma</span>
+                                    </div>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" loading="lazy">
+                                        <span class="tech-card-name">VS Code</span>
+                                    </div>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" loading="lazy">
+                                        <span class="tech-card-name">GitHub</span>
+                                    </div>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" loading="lazy">
+                                        <span class="tech-card-name">Node.js</span>
+                                    </div>
+                                </div>
+                                <div class="tech-card">
+                                    <div class="tech-card-inner">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="NPM" loading="lazy">
+                                        <span class="tech-card-name">NPM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="hobbies-cta fade-up-el" id="hobbies">
+                <div class="hobbies-cta-bg">
+                    <img src="/img/Agung.jpg" alt="Mountain view" class="hobbies-cta-img" loading="lazy">
+                    <div class="hobbies-cta-overlay"></div>
+                </div>
+                <div class="hobbies-cta-inner">
+                    <span class="hobbies-cta-label">Beyond the screen</span>
+                    <h3 class="hobbies-cta-title">Explore My Hobbies</h3>
+                    <p class="hobbies-cta-desc">From mountain summits to ocean depths — a window into the adventures that fuel my creativity.</p>
+                    <a href="/hobbies.html" class="hobbies-cta-btn">Enter Hobbies World &rarr;</a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    </main>
+
+    <footer class="contact-section" id="contacts">
+        <div class="container">
+            <div class="contact-layout">
+
+                <div class="contact-info-panel fade-up-el">
+                    <span class="contact-pre">Hola, amigos</span>
+                    <h2 class="contact-title">Let's create something meaningful together.</h2>
+                    
+                    <div class="contact-links">
+                        <a href="mailto:faris.salman@ui.ac.id" class="email-direct">faris.salman@ui.ac.id</a>
+                        <div class="social-links">
+                            
+                            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="LinkedIn" id="social-linkedin">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" fill="none">
+                                    <rect width="72" height="72" rx="12" fill="#0A66C2"/>
+                                    <path d="M20.5 28.5H27.5V51.5H20.5V28.5Z" fill="white"/>
+                                    <circle cx="24" cy="21" r="4" fill="white"/>
+                                    <path d="M31.5 28.5H38V31.8C39.2 29.8 41.8 28 45.5 28C52 28 53.5 32 53.5 38V51.5H46.5V39.5C46.5 36.5 46 34 43 34C40 34 38.5 36.2 38.5 39.5V51.5H31.5V28.5Z" fill="white"/>
+                                </svg>
+                                <span class="social-icon-label">LinkedIn</span>
+                            </a>
+                            
+                            <a href="https://www.instagram.com/salman.azhr" target="_blank" rel="noopener" class="social-icon-link" aria-label="Instagram" id="social-instagram">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" fill="none">
+                                    <defs>
+                                        <radialGradient id="ig-grad" cx="30%" cy="100%" r="120%">
+                                            <stop offset="0%" stop-color="#FFDC80"/>
+                                            <stop offset="25%" stop-color="#FCAF45"/>
+                                            <stop offset="50%" stop-color="#F77737"/>
+                                            <stop offset="65%" stop-color="#F56040"/>
+                                            <stop offset="80%" stop-color="#FD1D1D"/>
+                                            <stop offset="100%" stop-color="#833AB4"/>
+                                        </radialGradient>
+                                    </defs>
+                                    <rect width="72" height="72" rx="16" fill="url(#ig-grad)"/>
+                                    <rect x="14" y="14" width="44" height="44" rx="12" stroke="white" stroke-width="3" fill="none"/>
+                                    <circle cx="36" cy="36" r="10" stroke="white" stroke-width="3" fill="none"/>
+                                    <circle cx="49" cy="23" r="2.5" fill="white"/>
+                                </svg>
+                                <span class="social-icon-label">Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-panel fade-up-el">
+                    <div class="feedback-card">
+                        <h3 class="feedback-title">Thoughts & Suggestions</h3>
+                        <p class="feedback-subtitle">I'm always open to fresh perspectives, critiques, or simple hellos. Drop your feedback below.</p>
+                        
+                        <form id="feedback-form" action="https://api.web3forms.com/submit" method="POST" class="minimal-form">
+                            <!-- Web3Forms Access Key (User will replace this) -->
+                            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                            <div class="form-row">
+                                <input type="text" name="name" placeholder="Nama (Opsional)" aria-label="Your Name" class="form-input">
+                            </div>
+                            <div class="form-row">
+                                <textarea name="message" placeholder="Tell me anything. Suggestions, critiques, or idk" aria-label="Feedback Message" rows="5" required class="form-input"></textarea>
+                            </div>
+                            <div style="display: flex; gap: 12px; align-items: stretch;">
+                                <button type="submit" class="submit-btn" style="flex: 1;">Send Feedback</button>
+                                <a href="/terimakasih.html" class="submit-btn" style="flex: 1; display: flex; align-items: center; justify-content: center; font-size: 11px; padding: 12px 8px; background: transparent; color: var(--color-text-main); border: 1px solid var(--color-border-subtle); text-align: center; text-decoration: none;">Pencet kalo udah kirim feedback</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 Faris Salman. Built quietly with natural colors.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <script type="module" src="/js/main.js"></script>
+</body>
+</html>
+
