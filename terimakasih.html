@@ -69,6 +69,14 @@
             color: var(--color-bg);
             border-color: var(--color-text-main);
         }
+
+        .audio-credit {
+            font-family: var(--font-secondary, 'Inter', sans-serif);
+            font-size: 10px;
+            color: var(--color-text-muted, #8a9385);
+            margin-top: var(--space-xl);
+            opacity: 0.7;
+        }
     </style>
 </head>
 <body>
@@ -79,5 +87,22 @@
     </div>
 
     <a href="/index.html" class="back-link">&larr; Kembali ke Beranda</a>
+
+    <audio id="mario-fart" loop autoplay>
+        <source src="/music/mariofart.mp3" type="audio/mpeg">
+    </audio>
+    <p class="audio-credit">Audio: Super Mario Bros. Music (Fart Version) by The Speed Nguyen International Channel.</p>
+
+    <script>
+        // Ensure audio plays as some browsers require interaction, but since they clicked a button to get here, it usually works.
+        // We'll just attempt to play it programmatically just in case.
+        document.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('mario-fart');
+            if (audio) {
+                audio.volume = 0.2;
+                audio.play().catch(e => console.log('Autoplay prevented by browser:', e));
+            }
+        });
+    </script>
 </body>
 </html>
