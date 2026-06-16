@@ -32,8 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     lenis.stop();
 
+    // --- 2. Entrance Animation ---
     const enterBtn = document.getElementById('enter-btn');
     const entranceGate = document.getElementById('entrance-gate');
+
 
     gsap.to('.entrance-mist', {
         x: '2%',
@@ -329,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
         lastScrollTop = scroll;
     });
 
-    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileToggle = document.querySelector('.mobile-nav-toggle');
     const navLinks = document.querySelector('.nav-links');
 
     if (mobileToggle) {
