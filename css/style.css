@@ -1149,6 +1149,12 @@ textarea.form-input {
     min-height: 120px;
 }
 
+.form-actions {
+    display: flex;
+    gap: 12px;
+    align-items: stretch;
+}
+
 .submit-btn {
     align-self: flex-start;
     background: var(--color-text-main);

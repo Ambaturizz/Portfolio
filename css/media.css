@@ -96,6 +96,10 @@
     .contact-title {
         font-size: 32px;
     }
+
+    .feedback-card {
+        padding: 30px 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -105,7 +109,11 @@
     }
 
     h1 {
-        font-size: 44px;
+        font-size: clamp(32px, 12vw, 44px);
+    }
+
+    h2.section-title {
+        font-size: 32px;
     }
 
     .prompt-italic {
@@ -121,5 +129,18 @@
         flex-direction: column;
         gap: 12px;
     }
-}
 
+    .form-actions {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .works-filters {
+        gap: 10px;
+    }
+
+    .filter-btn {
+        font-size: 13px;
+        padding: 6px 16px;
+    }
+}
