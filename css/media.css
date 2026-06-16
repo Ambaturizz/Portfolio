@@ -1,39 +1,50 @@
 
+/* ==========================================================
+   RESPONSIVE BREAKPOINTS — Portfolio
+   Breakpoints: 1200 | 992 | 768 | 480 | 360
+   ========================================================== */
 
+/* ---- Tablet Large ---- */
 @media (max-width: 1200px) {
     .container {
         max-width: 960px;
     }
 }
 
+/* ---- Tablet ---- */
 @media (max-width: 992px) {
     .container {
-        max-width: 720px;
+        max-width: 100%;
+        padding: 0 24px;
     }
 
     h1 {
-        font-size: 64px;
+        font-size: 56px;
     }
 
     h2 {
         font-size: 40px;
     }
 
+    /* About */
     .about-grid {
         grid-template-columns: 1fr;
-        gap: 50px;
+        gap: 40px;
         width: 100%;
     }
 
     .about-img-col {
-        order: -1; 
+        order: -1;
         max-width: 100%;
         margin: 0 auto;
     }
+
     .portrait-container {
-        max-width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
     }
 
+    /* Works / Passion */
     .works-grid {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -43,18 +54,29 @@
         grid-column: span 1;
     }
 
+    /* Contact */
     .contact-layout {
         grid-template-columns: 1fr;
-        gap: 60px;
+        gap: 48px;
+    }
+
+    .contact-info-panel {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
     }
 }
 
+/* ---- Mobile ---- */
 @media (max-width: 768px) {
     .container {
-        max-width: 540px;
+        max-width: 100%;
         padding: 0 20px;
     }
 
+    /* Nav */
     .mobile-nav-toggle {
         display: flex;
     }
@@ -72,7 +94,6 @@
         border-bottom: 1px solid rgba(46, 46, 46, 0.1);
         gap: 30px;
         box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-
         opacity: 0;
         visibility: hidden;
         transform: translateY(-10px);
@@ -84,70 +105,167 @@
         visibility: visible;
         transform: translateY(0);
     }
-    
+
+    /* Spacing */
     :root {
-        --section-padding: 80px 0;
+        --section-padding: 70px 0;
     }
 
+    /* Hero */
     .hero-content {
-        padding: 0 10px;
+        padding: 0 4px;
+    }
+
+    .hero-name {
+        font-size: clamp(36px, 10vw, 60px) !important;
+    }
+
+    .hero-tagline {
+        font-size: clamp(14px, 3.5vw, 18px) !important;
+        max-width: 100% !important;
+    }
+
+    /* About */
+    .portrait-container {
+        max-width: 100%;
+    }
+
+    .editorial-block {
+        padding-left: 12px;
+    }
+
+    .section-title {
+        font-size: clamp(28px, 7vw, 44px) !important;
+    }
+
+    /* Contact / Footer */
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 
     .email-direct {
-        font-size: 22px;
+        font-size: 18px;
+        word-break: break-all;
     }
 
     .contact-title {
-        font-size: 32px;
+        font-size: clamp(24px, 6vw, 36px);
     }
 
+    /* Feedback Card */
     .feedback-card {
-        padding: 30px 20px;
+        padding: 24px 16px;
+    }
+
+    /* Form — stack buttons vertically */
+    .form-actions {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+
+    /* Tech cards */
+    .tech-card {
+        width: 130px;
+        height: 100px;
     }
 }
 
+/* ---- Small Mobile ---- */
 @media (max-width: 480px) {
     .container {
         max-width: 100%;
         padding: 0 16px;
     }
 
-    h1 {
-        font-size: clamp(32px, 12vw, 44px);
-    }
-
     h2.section-title {
-        font-size: 32px;
+        font-size: clamp(26px, 8vw, 36px);
     }
 
     .prompt-italic {
-        font-size: 20px;
+        font-size: 18px;
     }
 
-    .enter-btn, .btn, .submit-btn {
-        padding: 12px 24px !important;
-        font-size: 14px;
-        width: 100%;
+    /* Entrance */
+    .enter-btn {
+        padding: 12px 28px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    /* Buttons — full-width on mobile for easy tapping */
+    .submit-btn {
+        padding: 14px 20px;
+        font-size: 13px;
+        width: 100% !important;
         text-align: center;
         box-sizing: border-box;
+        flex: unset !important;
     }
 
     .social-links {
-        flex-direction: column;
+        flex-wrap: wrap;
         gap: 12px;
+        justify-content: center;
     }
 
+    /* Form actions always stacked */
     .form-actions {
         flex-direction: column;
-        gap: 16px;
+        gap: 10px;
+        align-items: stretch;
     }
 
+    /* Works filters */
     .works-filters {
-        gap: 10px;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .filter-btn {
-        font-size: 13px;
-        padding: 6px 16px;
+        font-size: 12px;
+        padding: 6px 14px;
+    }
+
+    /* Tech marquee cards */
+    .tech-card {
+        width: 110px;
+        height: 90px;
+    }
+
+    .tech-card-name {
+        font-size: 10px;
+    }
+
+    /* About section */
+    .about-grid {
+        gap: 28px;
+    }
+}
+
+/* ---- XSmall Mobile (iPhone SE, etc.) ---- */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .tech-card {
+        width: 90px;
+        height: 80px;
+    }
+
+    .feedback-card {
+        padding: 20px 12px;
+    }
+
+    .contact-title {
+        font-size: 22px;
+    }
+
+    .enter-btn {
+        padding: 10px 20px;
+        font-size: 12px;
     }
 }

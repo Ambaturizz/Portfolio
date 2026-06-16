@@ -63,7 +63,8 @@
 }
 
 html {
-    scroll-behavior: initial; 
+    scroll-behavior: initial;
+    overflow-x: clip;
 }
 
 body {
@@ -765,9 +766,12 @@ p.lead {
 
 .marquee-track-wrap {
     width: 100%;
+    max-width: 100%;
     overflow: hidden;
     position: relative;
+    contain: layout style;
 }
+
 
 .marquee-track-wrap::before,
 .marquee-track-wrap::after {
@@ -1165,11 +1169,10 @@ textarea.form-input {
 }
 
 .submit-btn {
-    align-self: flex-start;
-    background: var(--color-text-main);
-    color: var(--color-bg);
-    border: none;
-    padding: var(--space-sm) var(--space-lg);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
     border-radius: var(--radius-full);
     font-family: var(--font-body);
     font-size: var(--font-size-small);
@@ -1178,12 +1181,34 @@ textarea.form-input {
     font-weight: 700;
     cursor: pointer;
     transition: background-color var(--transition-quick), transform 0.3s ease;
-    margin-top: var(--space-sm);
+    text-decoration: none;
+    white-space: nowrap;
+    border: none;
+    flex: 1;
+    text-align: center;
 }
 
-.submit-btn:hover {
+.submit-primary {
+    background: var(--color-text-main);
+    color: var(--color-bg);
+}
+
+.submit-primary:hover {
     background: var(--color-accent-forest);
     transform: translateY(-3px);
+}
+
+.submit-secondary {
+    background: transparent;
+    color: var(--color-text-main);
+    border: 1px solid var(--color-border-subtle);
+    font-size: 11px;
+    padding: 14px 12px;
+}
+
+.submit-secondary:hover {
+    background: rgba(46, 46, 46, 0.06);
+    transform: translateY(-2px);
 }
 
 .footer-bottom {
