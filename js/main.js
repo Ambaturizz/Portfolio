@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     lenis.stop();
 
-    // --- 2. Entrance Animation ---
+
     const enterBtn = document.getElementById('enter-btn');
     const entranceGate = document.getElementById('entrance-gate');
 
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!bgMusic) return;
         bgMusic.volume = 0;
         bgMusic.play().then(() => {
-            // Fade in volume over 2 seconds
+
             let vol = 0;
             const fadeIn = setInterval(() => {
                 vol = Math.min(vol + 0.02, 0.4);
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         revealTexts.forEach((textEl, index) => {
             const words = textEl.innerText.split(' ');
-            textEl.innerHTML = ''; // clear original text
+            textEl.innerHTML = '';
             
             words.forEach(word => {
                 const wordWrap = document.createElement('span');
@@ -501,7 +501,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- 7. Feedback Form AJAX Submission ---
+
     const feedbackForm = document.getElementById('feedback-form');
     if (feedbackForm) {
         feedbackForm.addEventListener('submit', async function(e) {
