@@ -1,200 +1,32 @@
-# 🏔️ How to Build a Nature-Inspired Personal Portfolio Website
+# Hi there! Welcome to My Digital Garden 🌱
 
-> A comprehensive, step-by-step guide to building a warm, calm, and elegant personal portfolio website inspired by the quiet beauty of mountains, oceans, and glaciers.
+Welcome to the source code of my personal portfolio. More than just a resume, this website is designed to be a digital reflection of who I am—blending my professional work as a developer with my deep appreciation for nature, exploration, and minimalist design.
 
----
+## ⛰️ The Concept & Design Philosophy
 
-## 📸 Reference Layouts
+The internet can often feel loud, cluttered, and overwhelming. I wanted my corner of the web to feel different. Inspired by the quiet beauty of mountains and oceans, this portfolio is built around a few core principles:
 
-| Nature Entrance | Hero Section |
-|:---:|:---:|
-| ![Nature Entrance](docs/screenshots/01_nature_entrance.png) | ![Hero Section](docs/screenshots/02_hero_section.png) |
+- **Calm & Natural**: Utilizing an earthy color palette (warm off-whites, sage greens, and slate blues) to create a relaxed reading experience.
+- **Fluid & Breathing**: Implementing buttery-smooth scroll mechanics and gentle reveal animations so the interface feels alive, not rigid.
+- **Editorial Elegance**: Pairing classic serif fonts (*Playfair Display*) with clean sans-serifs (*Lato*) for a premium, magazine-like aesthetic.
 
-| About Me Section | Works Showcase |
-|:---:|:---:|
-| ![About Me](docs/screenshots/03_about_me.png) | ![Works Showcase](docs/screenshots/04_works_showcase.png) |
+## 🛠️ Under the Hood
 
-| Contact Section | Mobile Navigation |
-|:---:|:---:|
-| ![Contact Section](docs/screenshots/05_contact.png) | ![Mobile Navigation](docs/screenshots/06_mobile_nav.png) |
+While the design is focused on aesthetics, the codebase is engineered for performance and modern web standards. Here’s what powers the experience:
 
----
+- **Ultra-Fast Delivery**: Built with **Vite**, stripping away unnecessary bloat. All heavy image assets (like my high-res mountaineering gallery) have been heavily compressed into **WebP** formats, reducing payload sizes by up to 80% without sacrificing quality.
+- **Cinematic Animations**: Powered by **GSAP** (GreenSock). Instead of harsh static jumps, elements gracefully slide, fade, and stagger into view as you scroll.
+- **Smooth Scrolling**: Integrated **Lenis** to override the browser's clunky default scroll, replacing it with a fluid, momentum-based scrolling experience.
+- **Interactive Galleries**: The *Hobbies* section utilizes **Fancybox** for a seamless, zoomable masonry-style gallery.
+- **Serverless Contact Form**: The "Thoughts & Suggestions" section uses **Web3Forms** to securely handle messages without needing a backend database.
 
-## 📋 Table of Contents
+## 🗂️ Exploring the Code
 
-- [Overview](#overview)
-- [Design System & Theme](#-design-system--theme)
-- [Project Structure](#-project-structure)
-- [Step-by-Step Build Guide](#-step-by-step-build-guide)
-  - [Phase 1: Project Setup](#phase-1-project-setup)
-  - [Phase 2: Color Palette & Typography](#phase-2-color-palette--typography)
-  - [Phase 3: Nature Entrance Experience](#phase-3-nature-entrance-experience)
-  - [Phase 4: Serene Hero Section](#phase-4-serene-hero-section)
-  - [Phase 5: Smooth Scrolling & Parallax Setup](#phase-5-smooth-scrolling--parallax-setup)
-  - [Phase 6: About Me (Editorial Layout)](#phase-6-about-me-editorial-layout)
-  - [Phase 7: Works Showcase (Masonry Grid)](#phase-7-works-showcase-masonry-grid)
-  - [Phase 8: Contact Section](#phase-8-contact-section)
-  - [Phase 9: Header & Responsive Navigation](#phase-9-header--responsive-navigation)
-  - [Phase 10: Performance & Personal SEO](#phase-10-performance--personal-seo)
-- [Key Libraries & Alternatives](#-key-libraries--alternatives)
-- [Asset Recommendations](#-asset-recommendations)
-- [Deployment](#-deployment)
-- [Design Checklist](#-design-checklist)
+Feel free to poke around the repository! If you're a developer looking for inspiration, here are a few interesting areas you might want to check out:
+- `js/main.js`: Where all the GSAP ScrollTriggers and Lenis smooth scrolling logic are orchestrated.
+- `css/hobbies.css`: The styling behind the interactive, tab-based gallery layout for my personal interests.
+- `index.html` & `hobbies.html`: The semantic HTML structure connecting it all together.
 
 ---
 
-## Overview
-
-This guide details how to build a **Personal Non-Formal Portfolio** designed to feel authentic, calm, minimalist, and premium. By shifting away from industrial, futuristic, or dark sci-fi aesthetics, this layout prioritizes natural warmth and clean editorial design.
-
-### Core Vibe
-* **Natural**: Drawing beauty from organic forms and quiet landscapes.
-* **Calm**: Gentle transitions, spacious padding, and slow scroll animations.
-* **Elegant**: Classic editorial typography paired with a warm, off-white background.
-* **Explorative**: Interactive elements that reward gentle curiosity (e.g., hover zooms, parallax depth).
-
----
-
-## 🎨 Design System & Theme
-
-The website is styled around three natural themes: **Pegunungan (Mountains)**, **Lautan (Oceans)**, and **Es/Glacier (Ice)**.
-
-### Color Palette
-
-| Color | Hex | Role | Vibe |
-|-------|-----|------|------|
-| **Warm Off-White** | `#F5F3EE` | Primary Background | Clean, organic, warm, and easy on the eyes |
-| **Text Primary** | `#2E2E2E` | Body & Headings | Charcoal-black, softer than pure black |
-| **Muted Text** | `#6F6F6F` | Secondary Text / Dates | Soft grey for readability and hierarchy |
-| **Forest Accent** | `#5D6B57` | Sage / Mountain Accent | Natural green for mountain/forest highlights |
-| **Ocean Accent** | `#6B8CA3` | Slate Blue / Water Accent | Deep, calm blue for marine sections |
-| **Ice Accent** | `#DCE7EE` | Glacier Blue / Sky Accent | Cool, bright highlight color |
-
-### Typography
-
-* **Headings (`h1`, `h2`, `h3`, Navigation)**: **Playfair Display**
-  * *Vibe*: Elegant, literary, editorial, and high-contrast.
-* **Body Text (`p`, Buttons, Contacts, Captions)**: **Lato**
-  * *Vibe*: Clean, highly readable, friendly, and contemporary.
-
----
-
-## 📁 Project Structure
-
-```
-personal-portfolio/
-├── index.html                    # Single-page home entry point
-├── css/
-│   ├── style.css                 # Color tokens, typography, layout
-│   ├── plugins.css               # Lightbox & scrolling vendor styles
-│   ├── lenis.css                 # Smooth scrolling wrapper styles
-│   └── media.css                 # Clean responsive media queries
-├── js/
-│   ├── scripts.js                # Core scroll triggers, entrance animations
-│   ├── gsap.min.js               # GSAP Core
-│   ├── ScrollTrigger.min.js      # GSAP scroll animations
-│   ├── SplitText.min.js          # GSAP text line splitter
-│   ├── lenis.min.js              # Smooth scrolling utility
-│   ├── simpleParallax.min.js     # Natural parallax movements
-│   └── fancybox.js               # Interactive lightbox popup
-├── fonts/
-│   ├── PlayfairDisplay-Regular.woff2
-│   ├── PlayfairDisplay-Italic.woff2
-│   └── Lato-Regular.woff2
-├── img/
-│   ├── portrait.jpg              # Professional yet non-formal profile photo
-│   ├── mist-overlay.png          # Texturized misty element for entrance
-│   ├── mountain-silhouette.svg   # Multi-layered vector mountain shapes
-│   ├── items/                    # Grid gallery images
-│   │   ├── project-01.jpg
-│   │   ├── project-02.jpg
-│   │   └── ...
-│   └── icons/
-│       └── social/
-└── video/
-    ├── ambient-clouds.mp4        # Slow moving clouds for hero background
-    └── ocean-wave.mp4            # Gentle tide video for works background
-```
-
----
-
-## 🚀 Step-by-Step Build Guide
-
-### Phase 1: Project Setup
-
-#### 1.1 Create the HTML Boilerplate
-Prepare your main entry file, pointing directly to the required layout sheets and local web fonts.
-
-```html
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Nama Anda — Personal Portfolio</title>
-    
-    <!-- Preload fonts to avoid layout shift -->
-    <link rel="preload" href="fonts/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- CSS Dependencies -->
-    <link rel="stylesheet" href="css/plugins.css">
-    <link rel="stylesheet" href="css/lenis.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
-</head>
-<body>
-    <!-- Interactive elements will render here -->
-
-    <!-- Core Scripts -->
-    <script src="js/gsap.min.js"></script>
-    <script src="js/ScrollTrigger.min.js"></script>
-    <script src="js/SplitText.min.js"></script>
-    <script src="js/lenis.min.js"></script>
-    <script src="js/simpleParallax.min.js"></script>
-    <script src="js/fancybox.js"></script>
-    <script src="js/scripts.js"></script>
-</body>
-</html>
-```
-
----
-
-### Phase 2: Color Palette & Typography
-
-Define color variables, font faces, and base typographic rules in `css/style.css`.
-
-```css
-/* ==========================================================================
-   css/style.css — Design System Tokens
-   ========================================================================== */
-
-/* --- Custom Font Declarations --- */
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('../fonts/PlayfairDisplay-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('../fonts/PlayfairDisplay-Italic.woff2') format('woff2');
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Lato';
-    src: url('../fonts/Lato-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-/* --- Global Theme Variables --- */
-:root {
-    /* Nature-Inspired Color Scheme */
+*Thanks for stopping by! Whether you're a recruiter, a fellow developer, or just someone who stumbled across this repo, I hope you enjoy the experience.*
