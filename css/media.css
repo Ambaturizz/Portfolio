@@ -1,3 +1,13 @@
+@media (min-width: 993px) {
+    .about-intro-row {
+        display: none;
+    }
+
+    .about-desktop-header {
+        display: block;
+    }
+}
+
 @media (max-width: 1200px) {
     .container {
         max-width: 960px;
