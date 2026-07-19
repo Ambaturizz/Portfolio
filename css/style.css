@@ -592,6 +592,28 @@ p.lead {
     align-items: flex-start;
 }
 
+.about-intro-row {
+    display: none;
+}
+
+.about-desktop-header {
+    display: block;
+}
+
+.about-text-col {
+    order: 1;
+}
+
+.about-desktop-img-col {
+    order: 2;
+}
+
+.about-img-col {
+}
+
+.about-intro-text {
+}
+
 .about-header-wrap {
     margin-bottom: var(--space-lg);
 }
